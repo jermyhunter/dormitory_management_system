@@ -1,26 +1,31 @@
 /*
-	ÎÄ¼şÃû£ºDormitory.cpp
-	¹ØÁªÎÄ¼ş£ºDormitory.h
-	¹¦ÄÜ£ºÊµÏÖDormitoryÀà
-	ÄÚÈİ£º
+æ–‡ä»¶åï¼šDormitory.cpp
+å…³è”æ–‡ä»¶ï¼šDormitory.h
+åŠŸèƒ½ï¼šå®ç°Dormitoryç±»
+å†…å®¹ï¼š
 */
 #include "Dormitory.h"
-
-
+#include<iostream>
 
 Dormitory::Dormitory()
 {
 }
 /*
-	Dormitory
-	¹¦ÄÜ£ºÓĞ²Î¹¹ÔìDormitoryÀà¶ÔÏó
-	ÄÚÈİ£º
+Dormitory
+åŠŸèƒ½ï¼šæœ‰å‚æ„é€ Dormitoryç±»å¯¹è±¡
+å†…å®¹ï¼š
 */
-Dormitory::Dormitory(int room_num_, int building_num, int floor_num, int room_num, int area, int repair_status, bool is_deleted)
+Dormitory::Dormitory(int building_num, int floor_num, int room_num, double area, string repair_status)
 {
+	building_num_ = building_num;
+	floor_num_ = floor_num;
+	room_num_ = room_num;
+	area_ = area;
+	repair_status_ = repair_status;
 }
 
 
 Dormitory::~Dormitory()
 {
 }
+
