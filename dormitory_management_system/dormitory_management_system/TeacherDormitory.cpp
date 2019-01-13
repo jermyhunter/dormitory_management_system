@@ -1,8 +1,8 @@
 /*
-	ÎÄ¼şÃû£ºTeacherDormitory.cpp
-	¹ØÁªÎÄ¼ş£ºTeacherDormitory.h
-	¹¦ÄÜ£ºÊµÏÖTeacherDormitoryÀà
-	ÄÚÈİ£º
+æ–‡ä»¶åï¼šTeacherDormitory.cpp
+å…³è”æ–‡ä»¶ï¼šTeacherDormitory.h
+åŠŸèƒ½ï¼šå®ç°TeacherDormitoryç±»
+å†…å®¹ï¼š
 */
 #include "TeacherDormitory.h"
 
@@ -11,12 +11,23 @@ TeacherDormitory::TeacherDormitory()
 {
 }
 /*
-	TeacherDormitory
-	¹¦ÄÜ£ºÓĞ²Î¹¹ÔìTeacherDormitoryÀà¶ÔÏó
-	ÄÚÈİ£º
+TeacherDormitory
+åŠŸèƒ½ï¼šæœ‰å‚æ„é€ TeacherDormitoryç±»å¯¹è±¡
+å†…å®¹ï¼š
 */
-TeacherDormitory::TeacherDormitory(int room_num_, int building_num, int floor_num, int room_num, int area, int repair_status, bool is_deleted, string teacher_ID, int move_in_year, int living_duration, int rent_per_month, int utility_bills, int total_amount)
+TeacherDormitory::TeacherDormitory(int building_num, int floor_num, int room_num, double area, string repair_status, string teacher_ID, int move_in_year, int living_duration, int rent_per_month, int utility_bills)
 {
+	building_num_ = building_num;
+	floor_num_ = floor_num;
+	room_num_ = room_num;
+	area_ = area;
+	repair_status_ = repair_status;
+	teacher_ID_ = teacher_ID;
+	move_in_year_ = move_in_year;
+	living_duration_ = living_duration;
+	rent_per_month_ = rent_per_month;
+	utility_bills_ = utility_bills;
+	total_amount_ = (utility_bills_ + rent_per_month_) * living_duration_; //æ€»è´¹ç”¨=ï¼ˆæ°´ç”µè´¹+æœˆç§Ÿï¼‰*å…¥ä½æ—¶é—´
 }
 
 
