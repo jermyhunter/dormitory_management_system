@@ -34,7 +34,7 @@ public:
 	void sortRoomNum();//按房号进行排序
 
 	bool searchIDStudent();//对学生宿舍进行ID的顺序查找
-	bool searchIDTeacher();//对教师宿舍进行ID的顺序查找
+	bool searchIDTeacher();//对教师宿舍进行ID的二分查找
 	void searchNameStudent();//对学生宿舍进行姓名的顺序查找
 	void searchNameTeacher();//对教师宿舍进行姓名的二分查找
 	bool searchRoomNum();//按进行姓名的二分查找
@@ -49,7 +49,7 @@ private:
 	/*
 		以下为统计属性，新增宿舍房间数room_num_
 	*/
-	int room_num_ = 0;//宿舍房间数
+	int room_num_;//宿舍房间数
 	int total_amount_;//所有房间总价
 	int price_per_building_;//	学生/教师宿舍 每栋楼平均价格
 	int price_per_room_;//宿舍平均房间价
