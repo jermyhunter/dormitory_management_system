@@ -1,27 +1,29 @@
+#pragma once
 /*
-	ÎÄ¼şÃû£ºDormitory.h
-	¹ØÁªÎÄ¼ş£ºDormitory.cpp
-	¹¦ÄÜ£ºÊµÏÖDormitoryÀà
-	ÄÚÈİ£º
+æ–‡ä»¶åï¼šDormitory.h
+å…³è”æ–‡ä»¶ï¼šDormitory.cpp
+åŠŸèƒ½ï¼šå®ç°Dormitoryç±»
+å†…å®¹ï¼š
 */
 #ifndef DORMITORY_H
 #define DORMITORY_H
 #include<iostream>
+#include<string>
 using namespace std;
 class Dormitory
 {
 public:
-	Dormitory();//Ä¬ÈÏ¹¹Ôìº¯Êı
-	Dormitory(int room_num_, int building_num, int floor_num, int room_num, int area, int repair_status, bool is_deleted);//ÓĞ²Î¹¹Ôìº¯Êı
+	Dormitory();//é»˜è®¤æ„é€ å‡½æ•°
+	Dormitory(int building_num, int floor_num, int room_num, double area, string repair_status);//æœ‰å‚æ„é€ å‡½æ•°
 	virtual ~Dormitory();
 
 protected:
-	int building_num_;//Â¥ºÅ
-	int floor_num_;//Â¥²ãºÅ
-	int room_num_;//·¿¼äºÅ
-	double area_;//Ãæ»ı
-	string repair_status_;//ĞŞÉÉÇé¿ö
-	bool is_deleted_ = false;//Âß¼­É¾³ı
+	int building_num_;//æ¥¼å·
+	int floor_num_;//æ¥¼å±‚å·
+	int room_num_;//æˆ¿é—´å·
+	double area_;//é¢ç§¯
+	string repair_status_;//ä¿®ç¼®æƒ…å†µ
+	bool is_deleted_ = false;//é€»è¾‘åˆ é™¤
 
 };
 #endif // !DORMITORY_H
