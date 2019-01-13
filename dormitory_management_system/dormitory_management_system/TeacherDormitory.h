@@ -1,8 +1,8 @@
 /*
-	ÎÄ¼şÃû£ºTeacherDormitory.h
-	¹ØÁªÎÄ¼ş£ºTeacherDormitory.cpp
-	¹¦ÄÜ£ºÉùÃ÷TeacherDormitoryÀà
-	ÄÚÈİ£º
+æ–‡ä»¶åï¼šTeacherDormitory.h
+å…³è”æ–‡ä»¶ï¼šTeacherDormitory.cpp
+åŠŸèƒ½ï¼šå£°æ˜TeacherDormitoryç±»
+å†…å®¹ï¼š
 */
 #ifndef TEACHERDORMITORY_H
 #define TEACHERDORMITORY_H
@@ -11,32 +11,32 @@ class TeacherDormitory :
 	public Dormitory
 {
 public:
-	TeacherDormitory();//Ä¬ÈÏ¹¹Ôìº¯Êı
-	TeacherDormitory(int room_num_, int building_num, int floor_num, int room_num, int area, int repair_status, bool is_deleted,
-		string teacher_ID, int move_in_year, int living_duration, int rent_per_month, int utility_bills, int total_amount);//ÓĞ²Î¹¹Ôìº¯Êı
+	TeacherDormitory();//é»˜è®¤æ„é€ å‡½æ•°
+	TeacherDormitory( int building_num, int floor_num, int room_num, double area, string repair_status,
+		string teacher_ID, int move_in_year, int living_duration, int rent_per_month, int utility_bills);//æœ‰å‚æ„é€ å‡½æ•°
 	~TeacherDormitory();
 
-	bool setTeacherDormitory();//ÉèÖÃÖµ£¬ÔÚTableÀàµÄupdateº¯ÊıÖĞÊ¹ÓÃ
+	bool setTeacherDormitory();//è®¾ç½®å€¼ï¼Œåœ¨Tableç±»çš„updateå‡½æ•°ä¸­ä½¿ç”¨
 private:
 	/*
-		´Ó¸¸ÀàDortory¼Ì³ĞÀ´µÄÊôĞÔ
-			int room_num_;//·¿¼äºÅ
-			int building_num_;//Â¥ºÅ
-			int floor_num_;//Â¥²ãºÅ
-			int room_num_;//·¿¼äºÅ
-			int area_;//Ãæ»ı
-			int repair_status_;//ĞŞÉÉÇé¿ö
-			bool is_deleted_ = false;//Âß¼­É¾³ı
+	ä»çˆ¶ç±»Dortoryç»§æ‰¿æ¥çš„å±æ€§
+	int room_num_;//æˆ¿é—´å·
+	int building_num_;//æ¥¼å·
+	int floor_num_;//æ¥¼å±‚å·
+	int room_num_;//æˆ¿é—´å·
+	int area_;//é¢ç§¯
+	int repair_status_;//ä¿®ç¼®æƒ…å†µ
+	bool is_deleted_ = false;//é€»è¾‘åˆ é™¤
 	*/
-	string teacher_ID_;//Èë×¡½ÌÊ¦¹¤ºÅ
-	int move_in_year_;//°áÈëÄê·İ
-	int living_duration_;//Èë×¡Ê±¼ä
-	int rent_per_month_;//ÔÂ×â·Ñ
-	/*
-		ÔÂ×â½ğ = £¨1/2 *(µ±Ç°Äê·İ-Èë×¡Äê·İ) + 1) * 5 * Ãæ»ı
-	*/
-	int utility_bills_;//Ë®µç·Ñ
-	int total_amount_;//×Ü·ÑÓÃ
+	string teacher_ID_;//å…¥ä½æ•™å¸ˆå·¥å·
+	int move_in_year_;//æ¬å…¥å¹´ä»½
+	int living_duration_;//å…¥ä½æ—¶é—´
+	int rent_per_month_;//æœˆç§Ÿè´¹
+						/*
+						æœˆç§Ÿé‡‘ = ï¼ˆ1/2 *(å½“å‰å¹´ä»½-å…¥ä½å¹´ä»½) + 1) * 5 * é¢ç§¯
+						*/
+	int utility_bills_;//æ°´ç”µè´¹
+	int total_amount_;//æ€»è´¹ç”¨
 
 };
 
