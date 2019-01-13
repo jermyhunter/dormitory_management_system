@@ -1,52 +1,54 @@
 /*
-	ÎÄ¼şÃû£ºStudentDormitory.h
-	¹ØÁªÎÄ¼ş£ºStudentDormitory.cpp
-	¹¦ÄÜ£ºÉùÃ÷StudentDormitoryÀà
-	ÄÚÈİ£º
+æ–‡ä»¶åï¼šStudentDormitory.h
+å…³è”æ–‡ä»¶ï¼šStudentDormitory.cpp
+åŠŸèƒ½ï¼šå£°æ˜StudentDormitoryç±»
+å†…å®¹ï¼š
 */
 #ifndef STUDENTDORMITORY_H
 #define STUDENTDORMITORY_H
-#include<vector>
 #include "Dormitory.h"
+#include<vector>
+#include<string>
+
 class StudentDormitory :
 	public Dormitory
 {
 public:
 	class Student;
-	StudentDormitory();//Ä¬ÈÏ¹¹Ôìº¯Êı
-	StudentDormitory(int room_num_, int building_num, int floor_num, int room_num, int area, int repair_status, bool is_deleted,
-		int available_people, int actual_people, Student stu[], int price_per_student, int dormitory_actual_amount);//ÓĞ²Î¹¹Ôìº¯Êı
+	StudentDormitory();//é»˜è®¤æ„é€ å‡½æ•°
+	StudentDormitory( int building_num, int floor_num, int room_num, double area, string repair_status, 
+		int available_people, int actual_people, Student stu[], int price_per_student, int dormitory_actual_amount);//æœ‰å‚æ„é€ å‡½æ•°
 	~StudentDormitory();
-	bool setDormitory();//ÉèÖÃÖµ£¬ÔÚTableÀàµÄupdateº¯ÊıÖĞÊ¹ÓÃ
-	/*
-		Ñ§ÉúÀà
-	*/
+	bool setDormitory();//è®¾ç½®å€¼ï¼Œåœ¨Tableç±»çš„updateå‡½æ•°ä¸­ä½¿ç”¨
+						/*
+						å­¦ç”Ÿç±»
+						*/
 	class Student {
 		Student();
 		Student(string sex, string faculty, string name, string student_ID);
-		string sex_;//ĞÔ±ğ
-		string faculty_;//Ñ§Ôº
-		string name_;//Ñ§ÉúĞÕÃû
-		string student_ID_;//Ñ§ºÅ
+		string sex_;//æ€§åˆ«
+		string faculty_;//å­¦é™¢
+		string name_;//å­¦ç”Ÿå§“å
+		string student_ID_;//å­¦å·
 	};
 private:
 	/*
-		´Ó¸¸ÀàDortory¼Ì³ĞÀ´µÄÊôĞÔ
-			int room_num_;//·¿¼äºÅ
-			int building_num_;//Â¥ºÅ
-			int floor_num_;//Â¥²ãºÅ
-			int room_num_;//·¿¼äºÅ
-			int area_;//Ãæ»ı
-			int repair_status_;//ĞŞÉÉÇé¿ö
-			bool is_deleted_ = false;//Âß¼­É¾³ı
+	ä»çˆ¶ç±»Dortoryç»§æ‰¿æ¥çš„å±æ€§
+	int room_num_;//æˆ¿é—´å·
+	int building_num_;//æ¥¼å·
+	int floor_num_;//æ¥¼å±‚å·
+	int room_num_;//æˆ¿é—´å·
+	int area_;//é¢ç§¯
+	int repair_status_;//ä¿®ç¼®æƒ…å†µ
+	bool is_deleted_ = false;//é€»è¾‘åˆ é™¤
 	*/
-	int available_people_;//¿É×¡ÈËÊı
-	int actual_people_;//Êµ×¡ÈËÊı
-	vector<Student> student_;//¼ÇÂ¼Ã¿¸öÑ§ÉúµÄĞÅÏ¢
-	int price_per_student_;//Ã¿Ñ§Éú¼Û¸ñ
+	int available_people_;//å¯ä½äººæ•°
+	int actual_people_;//å®ä½äººæ•°
+	vector<Student> student_;//è®°å½•æ¯ä¸ªå­¦ç”Ÿçš„ä¿¡æ¯
+	int price_per_student_;//æ¯å­¦ç”Ÿä»·æ ¼
 	int dormitory_actual_amount_;
 	/*
-		ËŞÉáÊµ¼ÊÕ÷ÊÕ½ğ¶î=Ã¿Ñ§Éú¼Û¸ñ*Êµ×¡ÈËÊı
+	å®¿èˆå®é™…å¾æ”¶é‡‘é¢=æ¯å­¦ç”Ÿä»·æ ¼*å®ä½äººæ•°
 	*/
 
 };
